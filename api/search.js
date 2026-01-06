@@ -60,7 +60,7 @@ export default async function handler(req, res) {
 
     const params = new URLSearchParams({
       query,
-      max_results: "5",
+      max_results: "10",
       start_time: start.toISOString(),
       end_time: end.toISOString(),
       "tweet.fields": "created_at,public_metrics,lang,author_id",
