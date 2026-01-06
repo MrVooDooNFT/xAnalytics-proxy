@@ -117,8 +117,8 @@ export default async function handler(req, res) {
     const query = `(${orQuery}) -is:retweet lang:${safeLang}`;
 
     // Zaman aralığı
-    const end = new Date();
-    const start = new Date(end.getTime() - hoursNum * 60 * 60 * 1000);
+const end = new Date(Date.now() - 15_000);
+const start = new Date(end.getTime() - hoursNum * 60 * 60 * 1000);
 
     // X kuralı: max_results 10-100 arası olmalı. En düşük 10 kullanıyoruz.
     const params = new URLSearchParams({
